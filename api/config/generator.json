@@ -1,5 +1,5 @@
 {
-  "default_provider": "google",
+  "default_provider": "openai",
   "providers": {
     "dashscope": {
       "default_model": "qwen-plus",
@@ -41,10 +41,10 @@
       }
     },
     "openai": {
-      "default_model": "gpt-4o",
+      "default_model": "azure-gpt",
       "supportsCustomModel": true,
       "models": {
-        "gpt-4o": {
+        "azure-gpt": {
           "temperature": 0.7,
           "top_p": 0.8
         },
@@ -162,7 +162,7 @@
     },
     "azure": {
       "client_class": "AzureAIClient",
-      "default_model": "gpt-4o",
+      "default_model": "gpt-4o-mini",
       "supportsCustomModel": true,
       "models": {
         "gpt-4o": {

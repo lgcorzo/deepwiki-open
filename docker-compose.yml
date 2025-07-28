@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   deepwiki:
     build:
@@ -29,3 +27,17 @@ services:
       timeout: 10s
       retries: 3
       start_period: 30s
+    networks:
+      - deepwiki
+      - minio_mlflow_mlflownet
+      - llm-gateway_llm-gateway-net
+
+
+networks:
+  deepwiki:
+    ipam:
+      driver: default
+  minio_mlflow_mlflownet:
+    external: true
+  llm-gateway_llm-gateway-net:
+      external: true
